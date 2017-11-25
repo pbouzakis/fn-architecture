@@ -1,0 +1,10 @@
+{
+  "name": "fn-architecture",
+  "version": "1.0.0",
+  "description": "Functional architecture demo.",
+  "main": "index.js",
+  "repository": "git@github.com:pbouzakis/fn-architecture.git",
+  "author": "Paul Bouzakis <github@paulbouzakis.com>",
+  "license": "MIT",
+  "private": false
+}
