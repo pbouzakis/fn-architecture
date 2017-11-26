@@ -72,7 +72,10 @@ const toPerson = (firstName: string, lastName: string) => {
     firstName,
     lastName,
   });
-  return toChars50(firstName).map(_toPerson).ap_(toChars50(lastName));
+  return toChars50(firstName)
+    .map(_toPerson)
+    .ap_(toChars50(lastName))
+    .mapLeft(_ => 'Couldn\'t create Person from names.');
 };
 
 const isDateTooEarly = (date: Date) =>
