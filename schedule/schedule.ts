@@ -16,7 +16,7 @@ type Teacher =
   | {_tag: 'Member'} & Member
   | {_tag: 'Guest'} & Guest
 
-enum YogaClass {
+enum Classes {
   Hatha = 'Hatha',
   Vinyasa = 'Vinyasa',
   Iyengar = 'Iyengar',
@@ -25,7 +25,7 @@ enum YogaClass {
   Restorative = 'Restorative',
 }
 
-enum Workshop {
+enum Workshops {
   Intro = 'Intro',
   Chakra = 'Chakra',
   Nidra = 'Nidra',
@@ -44,10 +44,10 @@ type EventDuration =
   | {_tag: 'FullDayEvent'} & FullDayEvent
 
 type ScheduledClass =
-  {_tag: 'ScheduledClass', instructor: Instructor, yogaClass: YogaClass} & {duration: TimedEvent}
+  {_tag: 'ScheduledClass', instructor: Instructor, yogaClass: Classes} & {duration: TimedEvent}
 
 type ScheduledWorkshop =
-  {_tag: 'ScheduledWorkshop', teacher: Teacher, workshop: Workshop} & {duration: TimedEvent}
+  {_tag: 'ScheduledWorkshop', teacher: Teacher, workshop: Workshops} & {duration: TimedEvent}
 
 type MembersBirthday =
   {_tag: 'MembersBirthday', member: Member} & {duration: FullDayEvent}
@@ -105,14 +105,26 @@ const toGuest = (person: Person): Guest => (
   person as Guest
 );
 
-const toClass = (duration: TimedEvent, instructor: Instructor, yogaClass: YogaClass): ScheduledClass => ({
+const toYogaClassType = (type: keyof typeof Classes): Either.Either<string, Classes> => (
+  type in Classes
+    ? Either.right(Classes[type])
+    : Either.left(`Yoga Class not found: ${type}`)
+);
+
+const toWorkshopType = (type: keyof typeof Workshops): Either.Either<string, Workshops> => (
+  type in Workshops
+    ? Either.right(Workshops[type])
+    : Either.left(`Yoga Workshop not found: ${type}`)
+);
+
+const toScheduledClass = (duration: TimedEvent, instructor: Instructor, yogaClass: Classes): ScheduledClass => ({
   _tag: 'ScheduledClass',
   duration,
   instructor,
   yogaClass,
 });
 
-const toWorkshop = (duration: TimedEvent, teacher: Teacher, workshop: Workshop): ScheduledWorkshop => ({
+const toScheduledWorkshop = (duration: TimedEvent, teacher: Teacher, workshop: Workshops): ScheduledWorkshop => ({
   _tag: 'ScheduledWorkshop',
   duration,
   teacher,
