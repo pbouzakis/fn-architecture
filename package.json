@@ -6,5 +6,9 @@
   "repository": "git@github.com:pbouzakis/fn-architecture.git",
   "author": "Paul Bouzakis <github@paulbouzakis.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "@types/node": "8.0.53",
+    "typescript": "2.6.1"
+  }
 }

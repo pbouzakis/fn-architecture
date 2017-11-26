@@ -1,0 +1,17 @@
+{
+  "name": "@app/schedule",
+  "version": "1.0.0",
+  "description": "Schedule package.",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "8.0.53",
+    "@types/ramda": "0.25.6",
+    "jest": "21.2.1",
+    "typescript": "2.6.1"
+  },
+  "dependencies": {
+    "fp-ts": "0.6.3",
+    "ramda": "0.25.0"
+  }
+}
