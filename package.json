@@ -12,6 +12,8 @@
     "typescript": "2.6.1"
   },
   "scripts": {
+    "start": "yarn browser & yarn server",
+    "browser": "cd browser && yarn start",
     "server": "cd server && python -m SimpleHTTPServer 8000"
   }
 }
