@@ -1,0 +1,46 @@
+{
+  "classes": [
+    {
+      "type": "hatha",
+      "title": "Hatha Yoga",
+      "description": "It’s a practice of the body, a physical practice that balances these two energies. So, in reality, it is all hatha yoga."
+    },
+    {
+      "type": "vinyasa",
+      "title": "Vinyasa Yoga",
+      "description": "Get your flow on in this dynamic practice that links movement and breath together in a dance-like way. In most classes, you won’t linger long in each pose and the pace can be quick, so be prepared for your heart rate to rise."
+    },
+    {
+      "type": "iyengar",
+      "title": "Iyengar Yoga",
+      "description": "Here you’ll get nit-picky about precision and detail, as well as your body’s alignment in each pose. Props, from yoga blocks and blankets to straps or a ropes wall, will become your new best friend, helping you to work within a range of motion that is safe and effective."
+    },
+    {
+      "type": "kundalini",
+      "title": "Kundalini Yoga",
+      "description": "You’ll perform kriyas — repetitive physical exercises coupled with intense breath work — while also chanting, singing and meditating. The goal? To break through your internal barriers, releasing the untapped energy residing within you and bringing you a higher level of self-awareness."
+    },
+    {
+      "type": "restorative",
+      "title": "Restorative Yoga",
+      "description": "While it may feel like you’re not doing much in a restorative yoga class…that’s the point. The mellow, slow-moving practice with longer holds gives your body a chance tap into your parasympathetic nervous system, allowing you to experience deeper relaxation."
+    }
+  ],
+  "workshops": [
+    {
+      "type": "intro",
+      "title": "Intro to Yoga",
+      "description": "The introduction session is held on a Saturday afternoon and takes two hours."
+    },
+    {
+      "type": "chakra",
+      "title": "Chakra to Yoga",
+      "description": "This workshop will explore the energetic body through yoga. We will focus on the seven chakras commonly taught in modern yoga."
+    },
+    {
+      "type": "inversions",
+      "title": "Inversions Workshop",
+      "description": "For many people the thought of inversions can trigger a fear response! It’s not surprising, for most people going upside down does not come naturally."
+    }
+  ]
+}

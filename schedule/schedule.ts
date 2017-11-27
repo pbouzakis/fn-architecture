@@ -20,7 +20,6 @@ enum Classes {
   Hatha = 'Hatha',
   Vinyasa = 'Vinyasa',
   Iyengar = 'Iyengar',
-  Ashtanga = 'Ashtanga',
   Kundalini = 'Kundalini',
   Restorative = 'Restorative',
 }
@@ -28,9 +27,7 @@ enum Classes {
 enum Workshops {
   Intro = 'Intro',
   Chakra = 'Chakra',
-  Nidra = 'Nidra',
   Inversions = 'Inversions',
-  Restorative = 'Restorative',
 }
 
 type TimedEvent =
